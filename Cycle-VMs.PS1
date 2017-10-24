@@ -49,7 +49,10 @@ $maxCoresInRegion = $CoreInfo.Limit - $CoreInfo.CurrentValue + $vmCores
 Write-Host "$($vm.Name) can scale to a maximum of $($maxCoresInRegion) core(s) based on it's current region and subscription"
 
 $applicableSizes = ($vmSizes | Where-Object {$_.NumberOfCores -le $maxCoresInRegion}).Name
+
+#If you want to just load sizes from a file uncomment the following line
 #$applicableSizes = Get-Content sizes.txt
+
 Write-Host "Using the following applicable sizes:" -ForegroundColor Yellow
 $applicableSizes
 Write-Host "Continue?"
