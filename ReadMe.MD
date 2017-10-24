@@ -7,7 +7,7 @@ Status: **Probably broken!**
 
 ## Setup
 
-You need a VM in your subscription to work on. You should build it and wait for it to calm down. Update the image and install your benchmark software. This example will run Cinebench R15 in single/multi CPU mode.
+You need a VM in your subscription to work on. You should build it and wait for it to calm down. Update the image and set it up how you wish. This example will install & run Cinebench R15 in single/multi CPU mode.
 
 You will see there are 2 places for a loop to execute the benchmark - one inside the VM, one outside. Azure has a time limit of (I think) 1 hour to run a script extension therefore I moved the benchmark loop out of the script that runs inside the VM to stay within that limit on smaller VMs.
 
